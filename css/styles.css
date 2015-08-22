@@ -1,0 +1,356 @@
+/********** Nav bar *************/
+.nav {
+  height: 50px;
+  background-color: #354041
+}
+
+.nav > div {
+  position: relative;
+  height: 50px;
+}
+
+.fa-leanpub {
+  color: #fff;
+  font-size: 18pt;
+}
+
+#logo {
+  text-decoration: none;
+  font-size: 22pt;
+  color: #fff;
+  font-family: Lato;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.login {
+  text-decoration: none;
+  font-size: 12pt;
+  color: #fff;
+  font-family: Lato;
+  position: absolute;
+  top: 5px;
+  right: 150px;
+  margin: 9px;
+}
+
+#main-dropdown {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  margin: 9px;
+}
+
+
+/*********************
+Home page
+*********************/
+
+
+.panel > div {    /*handles inner divs*/
+  width: 960px;
+  margin: 0 auto; /* centers it*/
+  /*min-height: 32em; */  /*adding height to inner div expands both */
+}
+
+/******* Hero section *******/
+.hero {
+  min-height: 32em;
+  color: white;
+  background: radial-gradient(rgba(0, 143, 166, 0.4), rgba(0, 143, 166, 0.8)), url("../img/bigstock-Happy-student-using-her-laptop-80148530.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero > div {
+  position: relative;
+}
+
+.banner {
+  font-family: 'Lato';
+  font-weight: 100;
+  margin: auto;
+  padding-top: 40px;
+  width: 560px;
+  /*border-style: dotted;*/
+  text-align: center;
+}
+
+#motto {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 30pt;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#motto-sub {
+  display: inline-block;
+  padding: 5px;
+  margin: 0 auto;
+  font-style: italic;
+  font-size: 14pt;
+  /*color: #586365;*/
+}
+
+.welcome-msg {
+  /*border-style: dotted;*/
+  font-family: Lato;
+  font-size: 16pt;
+  width: 400px;
+  float: right;
+  margin-top: 50px;
+  margin-right: 60px;
+  /*text-shadow: 1px 1px grey;*/
+}
+
+/******** Primary Content Panel **********/
+
+.primary-content {
+  background-color: #D6E1E7;
+}
+
+.info-boxes {
+  text-align: center;
+  background-color: #D6E1E7;
+  margin-top: 0px;
+}
+
+.info { 
+  display: inline-block;
+  width: 290px; 
+  background-color: white;
+  padding: 5px;
+  margin: 10px 30px;
+  /*box-shadow: 0 0 20px -5px black;*/
+  min-height: 200px;
+  width: 200px;
+  vertical-align: top;
+  text-align: center;
+  border-radius: 5%;
+}
+
+.points-circle {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: rgb(0, 143, 166);
+  display: inline-block;
+}
+
+.fa-graduation-cap, .fa-trophy {
+  padding: 15px;
+  font-size: 20pt;
+}
+
+/****** footer ******/
+footer {
+   background-color: #354041;
+   height: 100px;
+}
+
+
+
+/*********************************
+Dashboard Page
+***********************************/
+
+.dashboard {
+  background-color: rgb(0, 143, 166);
+  margin: 0px;
+  font-family: Lato;
+}
+
+.user-content-pane {
+  width: 240px;
+  background-color: rgb(0, 143, 166);
+  min-height: 1010px;
+  float: left;
+}
+
+.dashboard-inner-div {
+  overflow: hidden;
+  background-color: #fff;
+  font-style: Lato;
+}
+
+.user-content-pane h2 {
+  color: blue;
+}
+
+.dashboard-lesson-list {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+.dashboard-module {
+  border-top: 2px solid;
+  overflow: auto;
+  margin: 20px;
+}
+
+.dashboard-module-title {
+  width: 240px;
+  float: left;
+}
+
+.dashboard-module-title a {
+  text-decoration: none;
+}
+
+.dashboard-module-lessons {
+  margin-left: 290px;
+  text-align: left;
+}
+
+.dashboard-module-lessons > div {
+  margin: 8px;
+}
+
+
+/****************
+Lessons
+******************/
+
+/****** columns ******/
+.col {
+  vertical-align: top;
+  display: inline-block;
+  min-height: 960px;
+  background-color: #eee;
+}
+
+.col2 {
+  background-color: #fff;
+}
+
+.col1, .col3 {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+/**** nav column *******/
+.module-lessons-nav {
+  width: 370px;
+  background-color: #eee;
+  font-family: Lato;
+  border-bottom: 2px solid grey;
+}
+
+.module-lessons-nav h2 {
+  border-bottom: 2px solid grey;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*lesson link*/
+.lesson {
+  padding: 20px 10px 20px 70px;
+  background-color: #eee;
+  position: relative;
+}
+
+.lesson a {
+  text-decoration: none;
+}
+
+/* new (pseudo-)element
+as a horizontal line */
+.lesson::before {
+  content: '';
+  display: block;
+  background-color: gray;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+/*  use i in order to use font-awesome icon */
+.lesson i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-40%);
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+/*circle*/
+.lesson::after {
+  content: '';
+  display: block;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border: 3px solid gray;
+}
+
+.lesson.active {
+  background-color: rgb(0, 143, 166);
+  color: #fff;
+}
+
+.lesson.active::before {
+  background-color: red;
+} 
+
+.lesson.active::after {
+  border: 3px solid red;
+}
+
+.module-lessons-nav .lesson-link {
+  border-top: 2px solid grey;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*****   Video  ******/
+.study-content {
+  width: 860px;
+  margin-top: 20px;
+}
+
+/****** Question *******/
+.challenge {
+  width: 370px;
+  font-family: Lato;
+  padding: 10px;
+}
+
+.dq-title {
+  text-align: center;
+  border-bottom: 2px solid grey;
+}
+
+.challenge label {
+  display: block;
+  padding: 5px;
+}
+
+.challenge button {
+  margin-top: 20px;
+  margin-left: 60px;
+  color: rgb(0, 143, 166);
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/*****************
+Admin  
+****************/
+
+.add-lesson-form label {
+  display: block;
+  padding: 5px;
+}

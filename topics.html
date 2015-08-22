@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SS | Lessons</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,100,300italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+
+	<header class="panel nav">
+		<div>
+			<i class="fa fa-leanpub"></i>
+			<a id="logo" href="index.html">SimpleStudy</a>
+			<select name="dropdown" id="main-dropdown">
+				<option value="Home">Home</option>
+				<option value="Account">Account</option>
+				<option value="Help">Help</option>
+				<option value="Logout">Logout</option>
+			</select>
+		</div>
+	</header>
+	
+	<div class="col col1">
+		<div class="module-lessons-nav">
+			<h2 class="title"></h2>
+			<div class="lesson-list">
+				<!-- lessons template -->
+			</div>
+			<h4 class="lesson-link"><a class="next-topic" href="#">Next topic</a> </h4>
+		</div>
+	</div>
+
+	<div class="col col2">
+		<div class="study-content"></div>
+			<!-- video -->
+	</div>
+
+	<div class="col col3">
+		<form class="challenge">
+			<!-- question template -->
+		</form>
+		<div class="points">points here</div>
+		<div class="feedback">feedback here</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.2/backbone.js"></script>
+	<script src="js/topics.js"></script>
+
+	<script type="text/x-handlebars-template" id="lessons-template">
+		{{#each this}}
+		<div class="lesson" data-id="{{id}}">
+			<a href="#"><i class="fa fa-play-circle-o"></i>{{name}}</a>
+		</div>
+		{{/each}}
+	</script>
+
+	<script type="text/x-handlebars-template" id="question-template">
+		<div class="question-container"  data-id="{{id}}">
+			<div class="dq-title"><h2>Challenge Question</h2></div>
+			<h3>{{question}}</h3>
+			<label><input type="radio" name="dq1" value="a"> {{answerA}}</label>
+			<label><input type="radio" name="dq1" value="b"> {{answerB}}</label> 
+			<label><input type="radio" name="dq1" value="c"> {{answerC}}</label>
+			<label><input type="radio" name="dq1" value="d"> {{answerD}}</label>
+			<button type="submit">Answer</button>
+		</div>	
+	</script>
+
+</body>
+</html>

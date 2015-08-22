@@ -1,0 +1,438 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "name": "Metaphysics"
+    },
+    {
+      "id": 2,
+      "name": "Epistemology"
+    },
+    {
+      "id": 3,
+      "name": "Anthropology"
+    },
+    {
+      "id": 4,
+      "name": "Philosophy of Religion"
+    },
+    {
+      "id": 5,
+      "name": "Ethics"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "topicId": 1,
+      "name": "The ultimate nature of reality - Keith Ward"
+    },
+    {
+      "id": 2,
+      "topicId": 1,
+      "name": "Could our universe be a fake? - David Brin"
+    },
+    {
+      "id": 3,
+      "topicId": 1,
+      "name": "The Allegory of the Cave - Plato"
+    },
+    {
+      "id": 4,
+      "topicId": 1,
+      "name": "Do multiple universes surely exist? - Max Tegmark"
+    },
+    {
+      "id": 5,
+      "topicId": 1,
+      "name": "What is time? - John Polkinghorne"
+    },
+    {
+      "id": 6,
+      "topicId": 2,
+      "name": "Are you brain in a vat?"
+    },
+    {
+      "id": 7,
+      "topicId": 2,
+      "name": "What is knowledge?"
+    },
+    {
+      "id": 8,
+      "topicId": 2,
+      "name": "Epist lesson?"
+    },
+    {
+      "id": 9,
+      "topicId": 2,
+      "name": "Epist lesson?"
+    },
+    {
+      "id": 10,
+      "topicId": 2,
+      "name": "Epist lesson?"
+    },
+    {
+      "id": 11,
+      "topicId": 3,
+      "name": "Anthro lesson?"
+    },
+    {
+      "id": 12,
+      "topicId": 3,
+      "name": "Anthro lesson?"
+    },
+    {
+      "id": 13,
+      "topicId": 3,
+      "name": "Anthro lesson?"
+    },
+    {
+      "id": 14,
+      "topicId": 3,
+      "name": "Anthro lesson?"
+    },
+    {
+      "id": 15,
+      "topicId": 3,
+      "name": "Anthro lesson?"
+    },
+    {
+      "id": 16,
+      "topicId": 4,
+      "name": "Religion lesson?"
+    },
+    {
+      "id": 17,
+      "topicId": 4,
+      "name": "Religion lesson?"
+    },
+    {
+      "id": 18,
+      "topicId": 4,
+      "name": "Religion lesson?"
+    },
+    {
+      "id": 19,
+      "topicId": 4,
+      "name": "Religion lesson?"
+    },
+    {
+      "id": 20,
+      "topicId": 4,
+      "name": "Religion lesson?"
+    },
+    {
+      "id": 21,
+      "topicId": 5,
+      "name": "Ethics lesson?"
+    },
+    {
+      "id": 22,
+      "topicId": 5,
+      "name": "Ethics lesson?"
+    },
+    {
+      "id": 23,
+      "topicId": 5,
+      "name": "Ethics lesson?"
+    },
+    {
+      "id": 24,
+      "topicId": 5,
+      "name": "Ethics lesson?"
+    },
+    {
+      "id": 25,
+      "topicId": 5,
+      "name": "Ethics lesson?"
+    },
+    {
+      "topicId": 5,
+      "name": "lesson name",
+      "id": 26
+    },
+    {
+      "topicId": 5,
+      "name": "lesosn",
+      "id": 27
+    },
+    {
+      "topicId": 5,
+      "name": "new ethics lesson test",
+      "id": 28
+    },
+    {
+      "topicId": 5,
+      "name": "ethics lesson test 42",
+      "id": 29
+    },
+    {
+      "topicId": 5,
+      "name": "ethics lesson 435",
+      "id": 30
+    },
+    {
+      "topicId": 5,
+      "name": "ethics 452",
+      "id": 31
+    },
+    {
+      "topicId": 1,
+      "name": "ethics 453",
+      "id": 32
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "lessonId": 1,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/iExqv32hVJM?rel=0\" frameborder=\"0\" allowfullscreen></iframe>"
+    },
+    {
+      "id": 2,
+      "lessonId": 2,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/NEokFnAmmFE?rel=0\" frameborder=\"0\" allowfullscreen></iframe>"
+    },
+    {
+      "id": 3,
+      "lessonId": 3,
+      "videoSrc": "<iframe width=\"853\" height=\"640\" src=\"https://www.youtube.com/embed/ZVN5PRpM_1Y?rel=0\" frameborder=\"0\" allowfullscreen></iframe>"
+    },
+    {
+      "id": 4,
+      "lessonId": 4,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/-0EG5hOZYEA?rel=0\" frameborder=\"0\" allowfullscreen></iframe>"
+    },
+    {
+      "id": 5,
+      "lessonId": 5,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/tkHfWezUAak?rel=0\" frameborder=\"0\" allowfullscreen></iframe>"
+    },
+    {
+      "id": 6,
+      "lessonId": 7,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/tkHfWezUAak?rel=0\" frameborder=\"0\" allowfullscreen></iframe>"
+    },
+    {
+      "id": 7,
+      "lessonId": 6,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/Rx3yIYdNmmQ?rel=0\" frameborder=\"0\" allowfullscreen></iframe>"
+    },
+    {
+      "lessonId": 30,
+      "videoSrc": "video 435",
+      "id": 8
+    },
+    {
+      "lessonId": 31,
+      "videoSrc": "ethics vid 452",
+      "id": 9
+    },
+    {
+      "lessonId": 32,
+      "videoSrc": "vid 453 ethics",
+      "id": 10
+    }
+  ],
+  "userAnswers": [
+    {
+      "id": 1,
+      "userId": 1,
+      "questionId": 2,
+      "correct": true
+    },
+    {
+      "userId": 1,
+      "questionId": 5,
+      "correct": false,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "questionId": 5,
+      "correct": true,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "questionId": 2,
+      "correct": true,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "questionId": 2,
+      "correct": true,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "questionId": 2,
+      "correct": false,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "questionId": 2,
+      "correct": false,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": false,
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": true,
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": false,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": false,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": true,
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": false,
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": false,
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": true,
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": false,
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": false,
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": true,
+      "id": 18
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "lessonId": 1,
+      "question": "According to Keith Ward, what is the biggest problem in philosophy as a whole?",
+      "answerA": "A. materialism vs. 'mind-like reality'",
+      "answerB": "B. foundationalism",
+      "answerC": "C. objectivism vs. pragmatism",
+      "answerD": "D. boring philosophers",
+      "correctAnswer": "a"
+    },
+    {
+      "id": 2,
+      "lessonId": 2,
+      "question": "According to David Brin, could the universe be fake?",
+      "answerA": "A. definately not",
+      "answerB": "B. probably",
+      "answerC": "C. nobody knows",
+      "answerD": "D. it is an illogical question",
+      "correctAnswer": "c"
+    },
+    {
+      "id": 3,
+      "lessonId": 3,
+      "question": "One key idea of the Allegory of the Cave is:",
+      "answerA": "A. reality might not be what it seems",
+      "answerB": "B. a more real world exists beyond the physical",
+      "answerC": "C. Platonic forms are absolute",
+      "answerD": "D. all of the above",
+      "correctAnswer": "d"
+    },
+    {
+      "id": 4,
+      "lessonId": 4,
+      "question": "According to Max Tegmark, how likely is it that multiple universes exist?",
+      "answerA": "A. pretty likely",
+      "answerB": "B. pretty unlikely",
+      "answerC": "C. there is no way to know",
+      "answerD": "D. it doesn't really matter",
+      "correctAnswer": "d"
+    },
+    {
+      "id": 5,
+      "lessonId": 5,
+      "question": "Which best describes Polkinghorne's view of time?",
+      "answerA": "A. space and time emerge from something more fundamental",
+      "answerB": "B. time is an illusion",
+      "answerC": "C. God is present in all time always",
+      "answerD": "D. the future is not becoming but is already",
+      "correctAnswer": "a"
+    },
+    {
+      "id": 6,
+      "lessonId": 7,
+      "question": "Which best describes an item of knowledge according to the standard definition?",
+      "answerA": "A. any belief",
+      "answerB": "B. only foundational beliefs",
+      "answerC": "C. a justified true belief",
+      "answerD": "D. none of the above",
+      "correctAnswer": "c"
+    },
+    {
+      "id": 7,
+      "lessonId": 6,
+      "question": "Why does David Chalmers look so weird?",
+      "answerA": "A. he is a hippie pretending to be a philosopher",
+      "answerB": "B. he is a philosopher pretending to be a hippie",
+      "answerC": "C. he lives in Tucson",
+      "answerD": "D. he believes he is really just a brain in a vat",
+      "correctAnswer": "c"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Wade Taylor"
+    },
+    {
+      "id": 2,
+      "name": "Sammy Alfaro"
+    },
+    {
+      "id": 3,
+      "name": "James Dean"
+    },
+    {
+      "id": 4,
+      "name": "Sally McStudent"
+    }
+  ]
+}
