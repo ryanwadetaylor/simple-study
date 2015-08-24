@@ -13,6 +13,7 @@ function renderQues(id, question, answerA, answerB, answerC, answerD) {
 	return quesTmpl(data)
 }
 
+// collect users correct and incorrect answer attempts
 function postQuestionAnswer(userId, questionId, correct) {
 	// post to userAnswers
 	$.post('http://localhost:3000/userAnswers', {
@@ -82,12 +83,12 @@ var Router = Backbone.Router.extend({
 			_this.navigate(String(nextId), {trigger: true})
 		})
 
-	  	// Set the topic name
+	  	// Set the topic name on page load
 	  	$.get('http://localhost:3000/topics/' + topicId).done(function(topic) {
 	  		$('.module-lessons-nav .title').html(topic.name);
 	  	});
 
-	  	// Get lessons list for the topic
+	  	// Get lessons list for the topic on page load
 	  	$.get('http://localhost:3000/topics/' + topicId + '/lessons').done(function (lessons) {
 	  		var tmpl = $('#lessons-template').html()
 	  		var template = Handlebars.compile(tmpl);

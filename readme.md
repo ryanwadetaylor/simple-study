@@ -1,3 +1,3 @@
 SimpleStudy is a learning app for college or high school students or anyone interested in an easy to use and fun way to gain mastery of basic principles of philosophy. Philosophy is an area of study that can sometimes cause confusion and dread for the beginning student. SimpleStudy takes away this fear and helps teachers present introductory material in a non-intimidating way by presenting a series of short video lessons and challenge questions, making the learning process fun again. 
 
-Technologies used: HTML, CSS, Javascript, JQuery, AJAX, Handlebars, Gulp, npm, Sass
+Technologies used: HTML, CSS, Javascript, JQuery, AJAX, Handlebars, Backbone, Gulp, npm, Sass

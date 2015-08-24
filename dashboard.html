@@ -36,39 +36,28 @@
 				<div class="dashboard-module">
 					<div class="dashboard-module-title">
 						<a href="metaphysics.html"><h3>Metaphysics</h3></a>
-						<p>short info about metaphysics, mor e info more info more info momf eor info</p>
+						<p>short info about metaphysics, more info more info more info momf eor info</p>
 					</div>
-					<div class="dashboard-module-lessons">
-						<h4>The ultimate nature of reality - Keith Ward</h4>
-						<h4>Could our universe be a fake? - David Brin</h4>
-						<h4>The Allegory of the Cave - Plato</h4>
-						<h4>Do multiple universes surely exist? - Max Tegmark</h4>
-						<h4>What is time? - John Polkinghorne</h4>
+					<div class="metaphysics-lesson-list">
+						<!-- metaphysics lessons -->
 					</div>
 				</div>
 				<div class="dashboard-module">
 					<div class="dashboard-module-title">
-						<a href="epist.html"><h3>Epistemology</h3></a>						<p>short info about metaphysics, mor e info more info more info momf eor info</p>
+						<a href="epist.html"><h3>Epistemology</h3></a>
+						<p>short info about epistemology, mor e info more info more info momf eor info</p>
 					</div>
-					<div class="dashboard-module-lessons">
-						<div><a href="">lesson1</a></div>
-						<div><a href="">lesson2</a></div>
-						<div><a href="">lesson3</a></div>
-						<div><a href="">lesson4</a></div>
-						<div><a href="">lesson5</a></div>
+					<div class="epistem-lesson-list">
+						<!-- epistem lessons -->
 					</div>
 				</div>
 				<div class="dashboard-module">
 					<div class="dashboard-module-title">
 						<a href="anthro.html"><h3>Anthropology</h3></a>
-						<p>short info about metaphysics, mor e info more info more info momf eor info</p>
+						<p>short info about anthro, mor e info more info more info momf eor info</p>
 					</div>
-					<div class="dashboard-module-lessons">
-						<div><a href="">lesson1</a></div>
-						<div><a href="">lesson2</a></div>
-						<div><a href="">lesson3</a></div>
-						<div><a href="">lesson4</a></div>
-						<div><a href="">lesson5</a></div>
+					<div class="anthro-lesson-list">
+						<!-- anthro lessons -->
 					</div>
 				</div>
 				<div class="dashboard-module">
@@ -76,25 +65,17 @@
 						<a href="philRel.html"><h3>Philosophy of Religion</h3></a>
 						<p>short info about metaphysics, mor e info more info more info momf eor info</p>
 					</div>
-					<div class="dashboard-module-lessons">
-						<div><a href="">lesson1</a></div>
-						<div><a href="">lesson2</a></div>
-						<div><a href="">lesson3</a></div>
-						<div><a href="">lesson4</a></div>
-						<div><a href="">lesson5</a></div>
+					<div class="rel-lesson-list">
+						<!-- religion lessons -->
 					</div>
 				</div>
 				<div class="dashboard-module">
 					<div class="dashboard-module-title">
 						<a href="ethics.html"><h3>Ethics</h3></a>
-						<p>short info about metaphysics, mor e info more info more info momf eor info</p>
+						<p>short info about ethics, mor e info more info more info momf eor info</p>
 					</div>
-					<div class="dashboard-module-lessons">
-						<div><a href="">lesson1</a></div>
-						<div><a href="">lesson2</a></div>
-						<div><a href="">lesson3</a></div>
-						<div><a href="">lesson4</a></div>
-						<div><a href="">lesson5</a></div>
+					<div class="ethics-lesson-list">
+						<!-- ethics lessons -->
 					</div>
 				</div>
 
@@ -105,10 +86,24 @@
 </div>
 
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+	<script src="js/dashboard.js"></script>
+
+
+<script type="text/x-handlebars-template" id="lessons-template">
+
+		<div class="dashboard-module-lessons">
+			{{#each this}}
+			<div class="lesson" data-id="{{id}}">
+				<a href="#"><i class="fa fa-play-circle-o"></i>{{name}}</a>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+</script>
+
 
 </body>
 
-<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
-<script src="index.js"></script>
 </html>

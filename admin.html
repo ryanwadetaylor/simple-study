@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Simple Study</title>
+	<title>Admin | SimpleStudy</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,100,300italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
+
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -24,34 +26,213 @@
 		</div>
 	</header>
 
+	<div class="container">
+		<h1>Lesson Manager</h1>
+		<hr>
+		<div class="page"></div>
+
+	</div>
+
 	
 
-	<div class="panel primary-content">
-		<div>
-			<h2>Add a lesson</h2>
-			<form action="" class="add-lesson-form">
-				<label for="topic-name">Topic</label>
-				 <select name="topic-name" id="topic-name">
-				 	<option value="1">Metaphysics</option>
-				 	<option value="2">Epistemology</option>
-				 	<option value="3">Anthropology</option>
-				 	<option value="4">Philosophy of Religion</option>
-				 	<option value="5">Ethics</option>
-				 </select>
-				 <label for="lesson-name">Lesson Name<input type="text" id="lesson-name" size="75" required></label>
-				 <label for="video-name">Video Name<input type="text" id="video-link" size="75"></label>
-				 <label for="question-name">Question<input type="text" id="question-name" size="75"></label>
-				 <label for="question-answer-a">Question answer A<input type="text" id="question-answer-a" size="75"></label>
-				 <label for="question-answer-b">Question answer B<input type="text" id="question-answer-b" size="75"></label>
-				 <label for="question-answer-c">Question answer C<input type="text" id="question-answer-c" size="75"></label>
-				 <label for="question-answer-d">Question answer D<input type="text" id="question-answer-d" size="75"></label>
-				 <label for="question-answer-correct">Correct answer<input type="text" id="question-answer-correct"></label>
-				<button class="add-btn">Add Lesson</button>
-			</form>
-		</div>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.2/backbone-min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
 	<script src="js/admin.js"></script>
+
+	<script type="text/x-handlebars-template" id="view-lessons-template">
+		<a href="#/new" class="btn btn-primary">New Lesson</a>
+		<hr/>
+		    <table class="table striped">
+		    	<thead>
+			        <tr>
+			          <th>Topic Id</th>
+			          <th>Lesson Name</th>
+			          <th></th>
+			          <th></th>
+			          <th></th>
+			          <th></th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	{{#each this}}
+			        <tr>
+			            <td>{{topicId}}</td>
+			            <td>{{name}}</td>
+			            <td><a href="#/editLesson/{{id}}" class="btn btn-info" role="button">Edit Name</a></td>
+			            <td><a href="#/editVideo/{{id}}" class="btn btn-info" role="button">Edit Video</a></td>
+			            <td><a href="#/editQuestion/{{id}}" class="btn btn-info" role="button">Edit Question</a></td>
+			            <td><a href="#/lesson/{{id}}/delete" class="btn btn-danger delete" role="button">Delete</a></td>
+			        </tr>
+			        {{/each}} 
+			    </tbody>
+		    </table>
+	</script>
+
+<!-- Add lesson template -->
+	<script type="text/x-handlebars-template" id="add-lesson-template">
+			<form class="add-lesson-form">
+				<h3>Create lesson</h3>
+				<hr/>
+				<div class="form-group">
+					<label for="topic-name" class="col-sm-2 control-label">Topic</label>
+					
+						<select name="topic-name" class="form-control" id="topic-name">
+						 	<option value="1">Metaphysics</option>
+						 	<option value="2">Epistemology</option>
+						 	<option value="3">Anthropology</option>
+						 	<option value="4">Philosophy of Religion</option>
+						 	<option value="5">Ethics</option>
+						</select>
+				
+				</div>
+				<div class="form-group">	 
+					<label for="lesson-name" class="col-sm-2 control-label">Lesson Name</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="lesson-name" size="75" value="{{name}}" required>
+					</div>
+				</div>
+				<div class="form-group">	
+					<label for="video-name" class="col-sm-2 control-label">Video Name</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="video-link" size="75" required>
+					</div>
+				</div>
+				<div class="form-group">	
+					<label for="question-name" class="col-sm-2 control-label">Question</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="question-name" size="75" required>
+					</div>	
+				</div>
+				 <div class="form-group">
+					<label for="question-answer-a" class="col-sm-2 control-label">Question answer A</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="question-answer-a" size="75" required>
+					</div>	
+				</div>
+				<div class="form-group">	
+					<label for="question-answer-b" class="col-sm-2 control-label">Question answer B</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="question-answer-b" size="75">
+					</div>	
+				</div>
+				 <div class="form-group">
+					<label for="question-answer-c" class="col-sm-2 control-label">Question answer C</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="question-answer-c" size="75">
+					</div>
+				</div>
+				 <div class="form-group">
+					<label for="question-answer-d" class="col-sm-2 control-label">Question answer D</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="question-answer-d" size="75">
+					</div>	
+				</div>
+				 <div class="form-group">
+					<label for="question-answer-correct" class="col-sm-2 control-label">Correct answer</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="question-answer-correct" required>
+					</div>	
+				</div>
+				
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button class="btn btn-default add-btn">Submit Lesson</button>
+					</div>
+				</div>
+			</form>
+	</script>
+
+	<!-- edit lesson name template -->
+	<script type="text/x-handlebars-template" id="edit-lesson-name-template">
+		<form class="edit-lesson-name-form">
+			<h3>Edit lesson name</h3>
+			<hr/>
+			<div class="form-group">	 
+				<label for="lesson-name" class="col-sm-2 control-label">Lesson Name</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="lesson-name" size="75" value="{{name}}" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button class="btn btn-default edit-lesson-name-btn">Submit</button>
+				</div>
+			</div>
+			<input type="hidden" id="lessonId" value="{{id}}">
+		</form>
+	</script>
+
+	<!-- edit video link template -->
+	<script type="text/x-handlebars-template" id="edit-video-template">
+		<form class="edit-video-form">
+			<div class="form-group">	
+				<label for="video-name" class="col-sm-2 control-label">Video Source</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="video-link" size="75" value="{{videoSrc}}" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button class="btn btn-default edit-video-btn">Submit</button>
+				</div>
+			</div>
+			<input type="hidden" id="lessonId" value="{{lessonId}}">
+			<input type="hidden" id="videoId" value="{{id}}">
+		</form>
+	</script>
+
+	<!-- edit question template -->
+	<script type="text/x-handlebars-template" id="edit-question-template">
+		<form class="edit-question-form">
+			<div class="form-group">	
+				<label for="question-name" class="col-sm-2 control-label">Question</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="question-name" size="75" value="{{question}}" required>
+				</div>	
+			</div>
+			 <div class="form-group">
+				<label for="question-answer-a" class="col-sm-2 control-label">Question answer A</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="question-answer-a" size="75" value="{{answerA}}" required>
+				</div>	
+			</div>
+			<div class="form-group">	
+				<label for="question-answer-b" class="col-sm-2 control-label">Question answer B</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="question-answer-b" size="75" value="{{answerB}}">
+				</div>	
+			</div>
+			 <div class="form-group">
+				<label for="question-answer-c" class="col-sm-2 control-label">Question answer C</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="question-answer-c" size="75" value="{{answerC}}">
+				</div>
+			</div>
+			 <div class="form-group">
+				<label for="question-answer-d" class="col-sm-2 control-label">Question answer D</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="question-answer-d" size="75" value="{{answerD}}">
+				</div>	
+			</div>
+			 <div class="form-group">
+				<label for="question-answer-correct" class="col-sm-2 control-label">Correct answer</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="question-answer-correct" value="{{correctAnswer}}" required>
+				</div>	
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button class="btn btn-default edit-question-btn">Submit</button>
+				</div>
+			</div>
+			<input type="hidden" id="lessonId" value="{{lessonId}}">
+			<input type="hidden" id="questionId" value="{{id}}">
+		</form>	
+	</script>
+
 
 </body>
 </html>

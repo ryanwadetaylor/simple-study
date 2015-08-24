@@ -296,7 +296,14 @@ as a horizontal line */
 
 .lesson.active {
   background-color: rgb(0, 143, 166);
+}
+
+.lesson.active a {
   color: #fff;
+}
+
+.lesson.active a i {
+  color: red;
 }
 
 .lesson.active::before {
@@ -350,7 +357,7 @@ as a horizontal line */
 Admin  
 ****************/
 
-.add-lesson-form label {
+/*.add-lesson-form label {
   display: block;
   padding: 5px;
-}
+}*/
