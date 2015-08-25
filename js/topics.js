@@ -1,5 +1,5 @@
 //handlebars compile fn for Challenge Question
-function renderQues(id, question, answerA, answerB, answerC, answerD) {
+function renderQues(id, question, answerA, answerB, answerC, answerD, lessonId) {
 	var tmpl = $('#question-template').html()
 	var quesTmpl = Handlebars.compile(tmpl)
 	var data = {
@@ -8,18 +8,20 @@ function renderQues(id, question, answerA, answerB, answerC, answerD) {
 		answerA: answerA,
 		answerB: answerB,
 		answerC: answerC,
-		answerD: answerD
+		answerD: answerD,
+		lessonId: lessonId
 	}
 	return quesTmpl(data)
 }
 
 // collect users correct and incorrect answer attempts
-function postQuestionAnswer(userId, questionId, correct) {
+function postQuestionAnswer(userId, questionId, correct, lessonId) {
 	// post to userAnswers
 	$.post('http://localhost:3000/userAnswers', {
 		userId: userId,
 		questionId: questionId,
-		correct: correct
+		correct: correct,
+		lessonId: lessonId
 	})
 }
 
@@ -36,7 +38,7 @@ $('.module-lessons-nav').on('click', '.lesson', function(e) {
 	})
 	$.get('http://localhost:3000/lessons/' + lessonId + '/questions').done(function (questions) {
 		var ques = questions[0]
-		$('.challenge').html(renderQues(ques.id, ques.question, ques.answerA, ques.answerB, ques.answerC, ques.answerD))
+		$('.challenge').html(renderQues(ques.id, ques.question, ques.answerA, ques.answerB, ques.answerC, ques.answerD, lessonId))
 	})	
 })
 
@@ -45,19 +47,26 @@ $('.challenge').on('click', 'button', function(e) {
 	e.preventDefault()
 	var ans = $('input[name=dq1]:checked').val()
 	var questionId = $('.question-container').data('id')
+	var lessonId = $('.question-container #lessonId').val()
 	$.get('http://localhost:3000/questions/' + questionId).done(function (question) {	
 		if (ans == question.correctAnswer) {
 			$('.feedback').html('right on!')
-			postQuestionAnswer(1, questionId, true)
+			postQuestionAnswer(1, questionId, true, lessonId)
+			// $('.lesson.active').removeClass('active').addClass('completed')
+			var idSelector = $('[data-id=' + lessonId + ']')
+			idSelector.find('i.fa').removeClass('fa-play-circle-o').addClass('fa-check')
+			$('.lesson.active').removeClass('active')
 		} else {
 			$('.feedback').html('Sorry, try again')
-			postQuestionAnswer(1, questionId, false)
+			postQuestionAnswer(1, questionId, false, lessonId)
 		}
 	}).done(function (){
+		// set points value
 		$.get('http://localhost:3000/userAnswers?correct=true').done(function (correctAnswers) {
 			$('.points').html(correctAnswers.length)
 		})
 	})
+
 });
 
 
@@ -83,10 +92,15 @@ var Router = Backbone.Router.extend({
 			_this.navigate(String(nextId), {trigger: true})
 		})
 
-	  	// Set the topic name on page load
+	  	// set topic name on page load
 	  	$.get('http://localhost:3000/topics/' + topicId).done(function(topic) {
 	  		$('.module-lessons-nav .title').html(topic.name);
-	  	});
+	  	}).done(function (){
+		// set points value
+		$.get('http://localhost:3000/userAnswers?correct=true').done(function (correctAnswers) {
+			$('.points').html(correctAnswers.length)
+		})
+	})
 
 	  	// Get lessons list for the topic on page load
 	  	$.get('http://localhost:3000/topics/' + topicId + '/lessons').done(function (lessons) {
@@ -95,8 +109,19 @@ var Router = Backbone.Router.extend({
 	  		$('.module-lessons-nav .lesson-list').html(template(lessons))
 	  		// set active lesson class
 	  		$( ".module-lessons-nav .lesson:first-child" ).trigger( "click" ); 
+	  	}).done(function (lessons) {
+  			// check if lesson question has been answered correctly and add styling
+	  		lessons.forEach(function(lesson) {
+	  			$.get('http://localhost:3000/lessons/' + lesson.id + '/userAnswers?correct=true').done(function (correctAnswers) {
+					var idSelector = $('[data-id=' + lesson.id + ']')
+					if (correctAnswers.length) {
+						idSelector.addClass('completed')
+						// $('.completed i').removeClass('fa-play-circle-o').addClass('fa-check')
+						idSelector.find('i.fa').removeClass('fa-play-circle-o').addClass('fa-check')
+					}
+				})
+	  		})
 	  	})
-
   	}
 })
 

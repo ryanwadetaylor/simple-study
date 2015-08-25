@@ -295,151 +295,29 @@
       "id": 1,
       "userId": 1,
       "questionId": 2,
-      "correct": true
+      "correct": true,
+      "lessonId": 2
     },
     {
       "userId": 1,
-      "questionId": 5,
-      "correct": false,
+      "questionId": 6,
+      "correct": true,
+      "lessonId": 7,
       "id": 2
     },
     {
       "userId": 1,
-      "questionId": 5,
+      "questionId": 7,
       "correct": true,
+      "lessonId": 6,
       "id": 3
     },
     {
       "userId": 1,
-      "questionId": 2,
+      "questionId": 5,
       "correct": true,
+      "lessonId": 5,
       "id": 4
-    },
-    {
-      "userId": 1,
-      "questionId": 2,
-      "correct": true,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "questionId": 2,
-      "correct": false,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "questionId": 2,
-      "correct": false,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": false,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": true,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": false,
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": false,
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": true,
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": false,
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": false,
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": true,
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": false,
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": false,
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "questionId": 1,
-      "correct": true,
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "questionId": 2,
-      "correct": false,
-      "id": 19
-    },
-    {
-      "userId": 1,
-      "questionId": 2,
-      "correct": false,
-      "id": 20
-    },
-    {
-      "userId": 1,
-      "questionId": 2,
-      "correct": true,
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "questionId": 3,
-      "correct": false,
-      "id": 22
-    },
-    {
-      "userId": 1,
-      "questionId": 2,
-      "correct": true,
-      "id": 23
-    },
-    {
-      "userId": 1,
-      "questionId": 2,
-      "correct": false,
-      "id": 24
-    },
-    {
-      "userId": 1,
-      "questionId": 2,
-      "correct": false,
-      "id": 25
     }
   ],
   "questions": [

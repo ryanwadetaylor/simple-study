@@ -28,14 +28,18 @@
 		<div class="dashboard-inner-div">
 			<div class="user-content-pane">
 				<h2>Introduction to Philosophy</h2>
-				<h3>username</h3>
-				<h4>badges earned</h4>
+				<h3>phi·los·o·phy </h3>
+				<div>fəˈläsəfē</div>
+				<div><em>noun</em></div>
+				<p>the study of the fundamental nature of knowledge, reality, and existence, especially when considered as an academic discipline.</p>
+				<div>Your total points!</div>
+				<h4 class="points"></h4>
 			</div>
 
 			<div class="dashboard-lesson-list">
 				<div class="dashboard-module">
 					<div class="dashboard-module-title">
-						<a href="metaphysics.html"><h3>Metaphysics</h3></a>
+						<a href="topics.html#1"><h3>Metaphysics</h3></a>
 						<p>short info about metaphysics, more info more info more info momf eor info</p>
 					</div>
 					<div class="metaphysics-lesson-list">
@@ -44,7 +48,7 @@
 				</div>
 				<div class="dashboard-module">
 					<div class="dashboard-module-title">
-						<a href="epist.html"><h3>Epistemology</h3></a>
+						<a href="topics.html#2"><h3>Epistemology</h3></a>
 						<p>short info about epistemology, mor e info more info more info momf eor info</p>
 					</div>
 					<div class="epistem-lesson-list">
@@ -53,7 +57,7 @@
 				</div>
 				<div class="dashboard-module">
 					<div class="dashboard-module-title">
-						<a href="anthro.html"><h3>Anthropology</h3></a>
+						<a href="topics.html#3"><h3>Anthropology</h3></a>
 						<p>short info about anthro, mor e info more info more info momf eor info</p>
 					</div>
 					<div class="anthro-lesson-list">
@@ -62,8 +66,8 @@
 				</div>
 				<div class="dashboard-module">
 					<div class="dashboard-module-title">
-						<a href="philRel.html"><h3>Philosophy of Religion</h3></a>
-						<p>short info about metaphysics, mor e info more info more info momf eor info</p>
+						<a href="topics.html#4"><h3>Philosophy of Religion</h3></a>
+						<p>short info about religion, mor e info more info more info momf eor info</p>
 					</div>
 					<div class="rel-lesson-list">
 						<!-- religion lessons -->
@@ -71,7 +75,7 @@
 				</div>
 				<div class="dashboard-module">
 					<div class="dashboard-module-title">
-						<a href="ethics.html"><h3>Ethics</h3></a>
+						<a href="topics.html#5"><h3>Ethics</h3></a>
 						<p>short info about ethics, mor e info more info more info momf eor info</p>
 					</div>
 					<div class="ethics-lesson-list">
@@ -96,7 +100,7 @@
 		<div class="dashboard-module-lessons">
 			{{#each this}}
 			<div class="lesson" data-id="{{id}}">
-				<a href="#"><i class="fa fa-play-circle-o"></i>{{name}}</a>
+				<i class="fa fa-play-circle-o"></i>{{name}}
 			</div>
 			{{/each}}
 		</div>

@@ -1,4 +1,4 @@
-/********** Nav bar *************/
+/********* Nav bar *************/
 .nav {
   height: 50px;
   background-color: #354041
@@ -164,9 +164,11 @@ Dashboard Page
 
 .user-content-pane {
   width: 240px;
-  background-color: rgb(0, 143, 166);
+  /*background-color: rgb(0, 143, 166);*/
   min-height: 1010px;
   float: left;
+  margin-top: 40px;
+  margin-left: 15px;
 }
 
 .dashboard-inner-div {
@@ -204,8 +206,25 @@ Dashboard Page
   text-align: left;
 }
 
-.dashboard-module-lessons > div {
-  margin: 8px;
+.dashboard-module-lessons .lesson {
+  margin: 0px;
+}
+
+.dashboard-module-lessons .lesson:first-child {
+  margin-top: 8px;
+}
+
+/*style ckeck font for completed lessons*/
+i.fa-check {
+  color: #33CC00;
+  font-size: 20pt;
+  position: absolute;
+  margin-left: -5px;
+  margin-top: -7px;
+  /*transform: translateY(40%);*/
+  /*width: 40px;*/
+  /*height: 40px;*/
+  /*z-index: 1;*/
 }
 
 
@@ -268,7 +287,7 @@ as a horizontal line */
   width: 4px;
 }
 
-/*  use i in order to use font-awesome icon */
+/*  i for font-awesome icon */
 .lesson i {
   position: absolute;
   left: 16px;
@@ -360,4 +379,4 @@ Admin
 /*.add-lesson-form label {
   display: block;
   padding: 5px;
-}*/
+}
