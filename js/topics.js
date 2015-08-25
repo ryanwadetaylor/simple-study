@@ -31,14 +31,17 @@ $('.module-lessons-nav').on('click', '.lesson', function(e) {
 	// stylize nav bar
 	$('.lesson').removeClass('active')
 	$(this).closest('.lesson').addClass('active')
-
+	// load video
 	var lessonId = $(this).data('id') 
 	$.get('http://localhost:3000/lessons/' + lessonId + '/videos').done(function (videos) {
 		$('.study-content').html(videos[0].videoSrc)
 	})
+	// load question
 	$.get('http://localhost:3000/lessons/' + lessonId + '/questions').done(function (questions) {
 		var ques = questions[0]
 		$('.challenge').html(renderQues(ques.id, ques.question, ques.answerA, ques.answerB, ques.answerC, ques.answerD, lessonId))
+	}).done (function () {
+		$('.feedback').html('')
 	})	
 })
 
@@ -52,13 +55,17 @@ $('.challenge').on('click', 'button', function(e) {
 		if (ans == question.correctAnswer) {
 			$('.feedback').html('Right on!')
 			postQuestionAnswer(1, questionId, true, lessonId)
-			// $('.lesson.active').removeClass('active').addClass('completed')
+			// add checkmark for correct answer
 			var idSelector = $('[data-id=' + lessonId + ']')
 			idSelector.find('i.fa').removeClass('fa-play-circle-o').addClass('fa-check')
 			$('.lesson.active').removeClass('active')
 		} else {
 			$('.feedback').html('Sorry, try again')
 			postQuestionAnswer(1, questionId, false, lessonId)
+			// remove feedback text
+			setInterval(function() {
+				$('.feedback').html('');
+			}, 3000);
 		}
 	}).done(function (){
 		// set points value
@@ -99,18 +106,6 @@ var Router = Backbone.Router.extend({
   	},	
 
   	showTopic: function(topicId) {
-  		console.log('SHOW TOPIC')
-		console.log(topicId)
-
-		// next topic link
-		// var _this = this
-		// $('.module-lessons-nav .next-topic').off('click')
-		// $('.module-lessons-nav').one('click', '.next-topic', function (e) {
-		// 	e.preventDefault();
-		// 	var nextId = Number(topicId) + 1
-		// 	_this.navigate(String(nextId), {trigger: true})
-		// })
-
 	  	// set topic name on page load
 	  	$.get('http://localhost:3000/topics/' + topicId).done(function(topic) {
 	  		$('.module-lessons-nav .title').html(topic.name);

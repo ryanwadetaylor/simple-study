@@ -1,0 +1,101 @@
+
+/*********************************
+Dashboard Page
+***********************************/
+
+.dashboard {
+  background-color: rgb(0, 143, 166);
+  margin: 0px;
+  font-family: Lato;
+}
+
+.user-content-pane {
+  width: 240px;
+  /*background-color: rgb(0, 143, 166);*/
+  min-height: 1010px;
+  float: left;
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+.dashboard-inner-div {
+  overflow: hidden;
+  background-color: #fff;
+  font-style: Lato;
+}
+
+.user-content-pane h2 {
+  color: blue;
+}
+
+.dashboard-points-container {
+  margin-top: 60px;
+}
+
+.dashboard-points-container h3 {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Lato';
+  margin: 10px;
+}
+
+.dashboard-points {
+  padding: 10px;
+  background-color: rgb(0, 143, 166);
+  text-align: center;
+  font-size: 36pt;
+  font-family: 'Lato';
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: 2px solid grey;
+  margin-left: 60px;
+  font-weight: bold;
+}
+
+.dashboard-lesson-list {
+  margin-left: 245px;
+  padding: 20px;
+  border-left: 1px solid grey;
+}
+
+.dashboard-module {
+  border-top: 2px solid;
+  overflow: auto;
+  margin: 20px;
+}
+
+.dashboard-module-title {
+  width: 240px;
+  float: left;
+}
+
+.dashboard-module-title a:visited {
+  color: rgb(0, 143, 166);
+}
+
+.dashboard-module-title a {
+  text-decoration: none;
+}
+
+.dashboard-module-lessons {
+  margin-left: 290px;
+  text-align: left;
+}
+
+.dashboard-module-lessons .lesson {
+  margin: 0px;
+}
+
+.dashboard-module-lessons .lesson:first-child {
+  margin-top: 8px;
+}
+
+/*style ckeck font for completed lessons*/
+i.fa-check {
+  color: #33CC00;
+  font-size: 20pt;
+  position: absolute;
+  margin-left: -5px;
+  margin-top: -7px;
+}

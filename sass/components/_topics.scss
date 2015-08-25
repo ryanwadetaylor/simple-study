@@ -1,0 +1,205 @@
+
+/****************
+Lessons / Topics page
+******************/
+
+/***** nav bar *****/
+.dashboard-link {
+  color: rgb(0, 143, 166) !important;
+  font-weight: bold;
+  padding-left: 20px;
+  font-size: 18px !important;
+}
+
+.dashboard-link a {
+  color: #fff;
+  text-decoration: none;
+}
+.topic-links {
+  float: right;
+  margin-right: 60px;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.topic-links a {
+  color: #fff;
+  font-family: Lato;
+  text-decoration: none;
+}
+
+/****** columns ******/
+.col {
+  vertical-align: top;
+  display: inline-block;
+  min-height: 960px;
+  background-color: #eee;
+}
+
+.col2 {
+  background-color: #fff;
+}
+
+.col1, .col3 {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+/**** nav column *******/
+.module-lessons-nav {
+  width: 370px;
+  background-color: #eee;
+  font-family: Lato;
+  border-bottom: 2px solid grey;
+}
+
+.module-lessons-nav h2 {
+  border-bottom: 2px solid grey;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*lesson link*/
+.lesson {
+  padding: 20px 10px 20px 70px;
+  background-color: #eee;
+  position: relative;
+}
+
+.lesson a {
+  text-decoration: none;
+}
+
+/* new (pseudo-)element
+as a horizontal line */
+.lesson::before {
+  content: '';
+  display: block;
+  background-color: gray;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+/*  i for font-awesome icon */
+.lesson i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-40%);
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+/*circle*/
+.lesson::after {
+  content: '';
+  display: block;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border: 3px solid gray;
+}
+
+.lesson.active {
+  background-color: rgb(0, 143, 166);
+}
+
+.lesson.active a {
+  color: #fff;
+}
+
+.lesson.active a i {
+  color: red;
+}
+
+.lesson.active::before {
+  background-color: red;
+} 
+
+.lesson.active::after {
+  border: 3px solid red;
+}
+
+.module-lessons-nav .lesson-link {
+  border-top: 2px solid grey;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*****   Video  ******/
+.study-content {
+  width: 860px;
+  margin-top: 20px;
+}
+
+/****** Question *******/
+.challenge {
+  width: 370px;
+  font-family: Lato;
+  padding: 10px;
+}
+
+.dq-title {
+  text-align: center;
+  border-bottom: 2px solid grey;
+}
+
+.challenge label {
+  display: block;
+  padding: 5px;
+}
+
+.challenge button {
+  margin-top: 20px;
+  margin-left: 10px;
+  color: rgb(0, 143, 166);
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.points-container {
+  margin-top: 60px;
+  margin-left: 30px;
+}
+
+.points-container h3 {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Lato';
+}
+
+.points {
+  padding: 10px;
+  background-color: rgb(0, 143, 166);
+  text-align: center;
+  font-size: 36pt;
+  font-family: 'Lato';
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: 2px solid grey;
+  margin-left: 130px;
+  font-weight: bold;
+}
+
+.feedback {
+  text-align: right;
+  padding-right: 85px;
+  font-size: 18pt;
+  font-family: Arial;
+  font-style: italic;
+  color: rgb(0, 143, 166);
+  height: 20pt;
+  margin-top: -45px;
+}
+

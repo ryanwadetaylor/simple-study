@@ -1,0 +1,42 @@
+/********* Nav bar *************/
+.nav {
+  height: 50px;
+  background-color: #354041
+}
+
+.nav > div {
+  position: relative;
+  height: 50px;
+}
+
+.fa-leanpub {
+  color: #fff;
+  font-size: 18pt;
+}
+
+#logo {
+  text-decoration: none;
+  font-size: 22pt;
+  color: #fff;
+  font-family: Lato;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.login {
+  text-decoration: none;
+  font-size: 12pt;
+  color: #fff;
+  font-family: Lato;
+  /*position: absolute;
+  top: 5px;
+  right: 150px;*/
+  float: right;
+  margin: 12px;
+}
+
+/****** panels ******/
+.panel > div {   
+  width: 960px;
+  margin: 0 auto; 
+}

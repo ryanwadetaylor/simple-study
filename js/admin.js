@@ -14,17 +14,6 @@ var LessonList = Backbone.View.extend({
 			_this.$el.html(tmpl(lessonData))
 		})
 	}
-
-	// events: {
-	// 	'click .delete': 'deleteLesson'
-	// },
-
-	// deleteLesson: function (ev) {
-	// 	this.lesson.destroy().done(function () {
-	// 		console.log('destruyed')
-	// 		router.navigate('', { trigger: true })
-	// 	})
-	// }
 })
 
 // add lesson view

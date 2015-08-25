@@ -1,0 +1,25 @@
+{
+  "name": "simple-study",
+  "version": "1.0.0",
+  "description": "learning app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanwadetaylor/simple-study.git"
+  },
+  "author": "Ryan Wade Taylor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanwadetaylor/simple-study/issues"
+  },
+  "homepage": "https://github.com/ryanwadetaylor/simple-study#readme",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^2.0.4"
+  }
+}
