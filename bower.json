@@ -1,0 +1,22 @@
+{
+  "name": "simpleStudy",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ryanwadetaylor/simple-study",
+  "authors": [
+    "Ryan Wade Taylor <ryant72@gmail.com>"
+  ],
+  "description": "learning app",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "~3.0.3",
+    "jquery": "~2.1.4",
+    "backbone": "~1.2.2"
+  }
+}

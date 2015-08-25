@@ -420,6 +420,13 @@
       "correct": true,
       "lessonId": 1,
       "id": 35
+    },
+    {
+      "userId": 1,
+      "questionId": 1,
+      "correct": false,
+      "lessonId": 1,
+      "id": 36
     }
   ],
   "questions": [
