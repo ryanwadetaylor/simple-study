@@ -63,10 +63,11 @@ $('.challenge').on('click', 'button', function(e) {
 			$('.feedback').html('Sorry, try again')
 			postQuestionAnswer(1, questionId, false, lessonId)
 			// remove feedback text
-			setInterval(function() {
+			setTimeout(function() {
 				$('.feedback').html('');
 			}, 3000);
 		}
+		
 	}).done(function (){
 		// set points value
 		$.get('http://localhost:3000/userAnswers?correct=true').done(function (correctAnswers) {

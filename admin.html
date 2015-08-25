@@ -5,8 +5,8 @@
 	<title>Admin | SimpleStudy</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,100,300italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
 
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -15,7 +15,7 @@
 	<header class="panel nav">
 		<div>
 			<i class="fa fa-leanpub"></i>
-			<a id="logo" href="index.html">SimpleStudy</a>
+			<a id="logo" href="index.html">simpleStudy</a>
 		</div>
 	</header>
 
@@ -38,40 +38,40 @@
 	<script type="text/x-handlebars-template" id="view-lessons-template">
 		<a href="#/new" class="btn btn-primary">New Lesson</a>
 		<hr/>
-		    <table class="table striped">
-		    	<thead>
-			        <tr>
-			          <th>Topic Id</th>
-			          <th>Lesson Name</th>
-			          <th></th>
-			          <th></th>
-			          <th></th>
-			          <th></th>
-			        </tr>
-			    </thead>
-			    <tbody>
-			    	{{#each this}}
-			        <tr>
-			            <td>{{topicId}}</td>
-			            <td>{{name}}</td>
-			            <td><a href="#/editLesson/{{id}}" class="btn btn-info" role="button">Edit Name</a></td>
-			            <td><a href="#/editVideo/{{id}}" class="btn btn-info" role="button">Edit Video</a></td>
-			            <td><a href="#/editQuestion/{{id}}" class="btn btn-info" role="button">Edit Question</a></td>
-			            <td><a href="#/lesson/{{id}}/delete" class="btn btn-danger delete" role="button">Delete</a></td>
-			        </tr>
-			        {{/each}} 
-			    </tbody>
-		    </table>
+	    <table class="table striped">
+	    	<thead>
+		        <tr>
+		          <th>Topic Id</th>
+		          <th>Lesson Name</th>
+		          <th></th>
+		          <th></th>
+		          <th></th>
+		          <th></th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		    	{{#each this}}
+		        <tr>
+		            <td>{{topicId}}</td>
+		            <td>{{name}}</td>
+		            <td><a href="#/editLesson/{{id}}" class="btn btn-info" role="button">Edit Name</a></td>
+		            <td><a href="#/editVideo/{{id}}" class="btn btn-info" role="button">Edit Video</a></td>
+		            <td><a href="#/editQuestion/{{id}}" class="btn btn-info" role="button">Edit Question</a></td>
+		            <td><a href="#/lesson/{{id}}/delete" class="btn btn-danger delete" role="button">Delete</a></td>
+		        </tr>
+		        {{/each}} 
+		    </tbody>
+	    </table>
 	</script>
 
 <!-- Add lesson template -->
 	<script type="text/x-handlebars-template" id="add-lesson-template">
-			<form class="add-lesson-form">
+			<form class="form-horizontal add-lesson-form">
 				<h3>Create lesson</h3>
 				<hr/>
 				<div class="form-group">
 					<label for="topic-name" class="col-sm-2 control-label">Topic</label>
-					
+					<div class="col-sm-10">
 						<select name="topic-name" class="form-control" id="topic-name">
 						 	<option value="1">Metaphysics</option>
 						 	<option value="2">Epistemology</option>
@@ -79,7 +79,7 @@
 						 	<option value="4">Philosophy of Religion</option>
 						 	<option value="5">Ethics</option>
 						</select>
-				
+					</div>
 				</div>
 				<div class="form-group">	 
 					<label for="lesson-name" class="col-sm-2 control-label">Lesson Name</label>
@@ -126,7 +126,13 @@
 				 <div class="form-group">
 					<label for="question-answer-correct" class="col-sm-2 control-label">Correct answer</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="question-answer-correct" required>
+						
+						<select name="topic-name" class="form-control" id="question-answer-correct">
+						 	<option value="a">a</option>
+						 	<option value="b">b</option>
+						 	<option value="c">c</option>
+						 	<option value="d">d</option>
+						</select>
 					</div>	
 				</div>
 				
@@ -140,7 +146,7 @@
 
 	<!-- edit lesson name template -->
 	<script type="text/x-handlebars-template" id="edit-lesson-name-template">
-		<form class="edit-lesson-name-form">
+		<form class="form-horizontal edit-lesson-name-form">
 			<h3>Edit lesson name</h3>
 			<hr/>
 			<div class="form-group">	 
@@ -160,7 +166,9 @@
 
 	<!-- edit video link template -->
 	<script type="text/x-handlebars-template" id="edit-video-template">
-		<form class="edit-video-form">
+		<form class="form-horizontal edit-video-form">
+			<h3>Edit video link</h3>
+			<hr/>
 			<div class="form-group">	
 				<label for="video-name" class="col-sm-2 control-label">Video Source</label>
 				<div class="col-sm-10">
@@ -179,7 +187,9 @@
 
 	<!-- edit question template -->
 	<script type="text/x-handlebars-template" id="edit-question-template">
-		<form class="edit-question-form">
+		<form class="form-horizontal edit-question-form">
+			<h3>Edit question</h3>
+			<hr/>
 			<div class="form-group">	
 				<label for="question-name" class="col-sm-2 control-label">Question</label>
 				<div class="col-sm-10">

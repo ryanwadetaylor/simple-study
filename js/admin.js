@@ -23,7 +23,6 @@ var AddLesson = Backbone.View.extend({
 
 	render: function (lessonId) {
 		var _this = this
-		console.log('add mode!')
 		var tmplString = $('#add-lesson-template').html()
 		var tmpl = Handlebars.compile(tmplString)
 		this.$el.html(tmpl)   	
@@ -140,7 +139,6 @@ var EditQuestion = Backbone.View.extend({
 		var _this = this
 		// render template with question data in it 
 		$.get('http://localhost:3000/lessons/' + lessonId + '/questions').done(function (question) {
-			console.log(question)
 			var tmplString = $('#edit-question-template').html()
 			var tmpl = Handlebars.compile(tmplString)
 			_this.$el.html(tmpl(question[0]))
@@ -153,7 +151,6 @@ var EditQuestion = Backbone.View.extend({
 
 	submitForm: function () {
 		var id = $('#questionId').val()
-		console.log(id)
 		$.ajax({
 			url: 'http://localhost:3000/questions/' + id,
 			type: 'PUT',
