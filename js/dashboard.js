@@ -12,7 +12,6 @@ $(function () {
   		lessons.forEach(function(lesson) {
   			$.get('http://localhost:3000/lessons/' + lesson.id + '/userAnswers?correct=true').done(function (correctAnswers) {
 				var idSelector = $('[data-id=' + lesson.id + ']')
-				console.log(idSelector)
 				if (correctAnswers.length) {
 					//idSelector.addClass('completed')
 					//$('.completed > i').removeClass('fa-play-circle-o').addClass('fa-check')
@@ -32,7 +31,6 @@ $(function () {
   		lessons.forEach(function(lesson) {
   			$.get('http://localhost:3000/lessons/' + lesson.id + '/userAnswers?correct=true').done(function (correctAnswers) {
 				var idSelector = $('[data-id=' + lesson.id + ']')
-				console.log(idSelector)
 				if (correctAnswers.length) {
 					idSelector.addClass('completed')
 					$('.completed > i').removeClass('fa-play-circle-o').addClass('fa-check')
@@ -48,7 +46,6 @@ $(function () {
   		lessons.forEach(function(lesson) {
   			$.get('http://localhost:3000/lessons/' + lesson.id + '/userAnswers?correct=true').done(function (correctAnswers) {
 				var idSelector = $('[data-id=' + lesson.id + ']')
-				console.log(idSelector)
 				if (correctAnswers.length) {
 					//idSelector.addClass('completed')
 					//$('.completed i.fa').removeClass('fa-play-circle-o').addClass('fa-check')
@@ -65,7 +62,6 @@ $(function () {
   		lessons.forEach(function(lesson) {
   			$.get('http://localhost:3000/lessons/' + lesson.id + '/userAnswers?correct=true').done(function (correctAnswers) {
 				var idSelector = $('[data-id=' + lesson.id + ']')
-				console.log(idSelector)
 				if (correctAnswers.length) {
 					idSelector.addClass('completed')
 					$('.completed > i').removeClass('fa-play-circle-o').addClass('fa-check')
@@ -81,7 +77,6 @@ $(function () {
   		lessons.forEach(function(lesson) {
   			$.get('http://localhost:3000/lessons/' + lesson.id + '/userAnswers?correct=true').done(function (correctAnswers) {
 				var idSelector = $('[data-id=' + lesson.id + ']')
-				console.log(idSelector)
 				if (correctAnswers.length) {
 					idSelector.addClass('completed')
 					$('.completed > i').removeClass('fa-play-circle-o').addClass('fa-check')
@@ -91,7 +86,7 @@ $(function () {
   	}).done(function (){
   		// load points
 		$.get('http://localhost:3000/userAnswers?correct=true').done(function (correctAnswers) {
-			$('.points').html(correctAnswers.length)
+			$('.dashboard-points').html(correctAnswers.length)
 		})
 	})
 

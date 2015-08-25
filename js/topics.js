@@ -50,7 +50,7 @@ $('.challenge').on('click', 'button', function(e) {
 	var lessonId = $('.question-container #lessonId').val()
 	$.get('http://localhost:3000/questions/' + questionId).done(function (question) {	
 		if (ans == question.correctAnswer) {
-			$('.feedback').html('right on!')
+			$('.feedback').html('Right on!')
 			postQuestionAnswer(1, questionId, true, lessonId)
 			// $('.lesson.active').removeClass('active').addClass('completed')
 			var idSelector = $('[data-id=' + lessonId + ']')

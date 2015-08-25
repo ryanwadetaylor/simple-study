@@ -49,8 +49,7 @@ Home page
 
 .panel > div {    /*handles inner divs*/
   width: 960px;
-  margin: 0 auto; /* centers it*/
-  /*min-height: 32em; */  /*adding height to inner div expands both */
+  margin: 0 auto; 
 }
 
 /******* Hero section *******/
@@ -72,7 +71,6 @@ Home page
   margin: auto;
   padding-top: 40px;
   width: 560px;
-  /*border-style: dotted;*/
   text-align: center;
 }
 
@@ -90,11 +88,9 @@ Home page
   margin: 0 auto;
   font-style: italic;
   font-size: 14pt;
-  /*color: #586365;*/
 }
 
 .welcome-msg {
-  /*border-style: dotted;*/
   font-family: Lato;
   font-size: 16pt;
   width: 400px;
@@ -130,7 +126,7 @@ Home page
   border-radius: 5%;
 }
 
-.points-circle {
+.index-points-circle {
   border: 2px solid black;
   border-radius: 50%;
   height: 60px;
@@ -139,7 +135,7 @@ Home page
   display: inline-block;
 }
 
-.fa-graduation-cap, .fa-trophy {
+.fa-graduation-cap, .fa-trophy, .fa-university {
   padding: 15px;
   font-size: 20pt;
 }
@@ -181,9 +177,37 @@ Dashboard Page
   color: blue;
 }
 
+.dashboard-points-container {
+  margin-top: 60px;
+}
+
+.dashboard-points-container h3 {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Lato';
+  margin: 10px;
+}
+
+.dashboard-points {
+  padding: 10px;
+  background-color: rgb(0, 143, 166);
+  text-align: center;
+  font-size: 36pt;
+  font-family: 'Lato';
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: 2px solid grey;
+  margin-left: 60px;
+  font-weight: bold;
+}
+
+
+
 .dashboard-lesson-list {
-  margin-left: 240px;
+  margin-left: 245px;
   padding: 20px;
+  border-left: 1px solid grey;
 }
 
 .dashboard-module {
@@ -229,7 +253,7 @@ i.fa-check {
 
 
 /****************
-Lessons
+Lessons / Topics page
 ******************/
 
 /****** columns ******/
@@ -370,6 +394,41 @@ as a horizontal line */
   font-size: 16px;
   font-weight: bold;
 }
+
+.points-container {
+  margin-top: 60px;
+  margin-left: 30px;
+}
+
+.points-container h3 {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Lato';
+}
+
+.points {
+  padding: 10px;
+  background-color: rgb(0, 143, 166);
+  text-align: center;
+  font-size: 36pt;
+  font-family: 'Lato';
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: 2px solid grey;
+  margin-left: 130px;
+  font-weight: bold;
+}
+
+.feedback {
+  text-align: right;
+  padding-right: 85px;
+  font-size: 18pt;
+  font-family: Arial;
+  font-style: italic;
+  color: rgb(0, 143, 166);
+}
+
 
 
 /*****************
