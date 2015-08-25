@@ -70,27 +70,46 @@ $('.challenge').on('click', 'button', function(e) {
 });
 
 
-
-
 var Router = Backbone.Router.extend({
 	// Route definition
 	routes: {
 		':topicId': 'showTopic',
+		'#1': 'metaphys',
+		'#2': 'epistem',
+		'#3': 'anthro',
+		'#4': 'relig',
+		'#5': 'ethics'
 	},
 
-  	// Route handler
+  	// Route handlers
+  	metaphys: function () {
+  		router.navigate('/#1', { trigger: true })
+  	},
+  	epistem: function () {
+  		router.navigate('/#2', { trigger: true })
+  	},
+  	anthro: function () {
+  		router.navigate('/#3', { trigger: true })
+  	},
+  	relig: function () {
+  		router.navigate('/#4', { trigger: true })
+  	},
+  	ethics: function () {
+  		router.navigate('/#5', { trigger: true })
+  	},	
+
   	showTopic: function(topicId) {
   		console.log('SHOW TOPIC')
 		console.log(topicId)
 
 		// next topic link
-		var _this = this
-		$('.module-lessons-nav .next-topic').off('click')
-		$('.module-lessons-nav').one('click', '.next-topic', function (e) {
-			e.preventDefault();
-			var nextId = Number(topicId) + 1
-			_this.navigate(String(nextId), {trigger: true})
-		})
+		// var _this = this
+		// $('.module-lessons-nav .next-topic').off('click')
+		// $('.module-lessons-nav').one('click', '.next-topic', function (e) {
+		// 	e.preventDefault();
+		// 	var nextId = Number(topicId) + 1
+		// 	_this.navigate(String(nextId), {trigger: true})
+		// })
 
 	  	// set topic name on page load
 	  	$.get('http://localhost:3000/topics/' + topicId).done(function(topic) {
@@ -100,7 +119,7 @@ var Router = Backbone.Router.extend({
 		$.get('http://localhost:3000/userAnswers?correct=true').done(function (correctAnswers) {
 			$('.points').html(correctAnswers.length)
 		})
-	})
+		})
 
 	  	// Get lessons list for the topic on page load
 	  	$.get('http://localhost:3000/topics/' + topicId + '/lessons').done(function (lessons) {
@@ -116,7 +135,7 @@ var Router = Backbone.Router.extend({
 					var idSelector = $('[data-id=' + lesson.id + ']')
 					if (correctAnswers.length) {
 						idSelector.addClass('completed')
-						// $('.completed i').removeClass('fa-play-circle-o').addClass('fa-check')
+						// add check mark if correct
 						idSelector.find('i.fa').removeClass('fa-play-circle-o').addClass('fa-check')
 					}
 				})

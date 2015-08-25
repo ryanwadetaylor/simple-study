@@ -28,10 +28,11 @@
   font-size: 12pt;
   color: #fff;
   font-family: Lato;
-  position: absolute;
+  /*position: absolute;
   top: 5px;
-  right: 150px;
-  margin: 9px;
+  right: 150px;*/
+  float: right;
+  margin: 12px;
 }
 
 #main-dropdown {
@@ -40,6 +41,8 @@
   right: 0;
   margin: 9px;
 }
+
+
 
 
 /*********************
@@ -221,6 +224,10 @@ Dashboard Page
   float: left;
 }
 
+.dashboard-module-title a:visited {
+  color: rgb(0, 143, 166);
+}
+
 .dashboard-module-title a {
   text-decoration: none;
 }
@@ -255,6 +262,31 @@ i.fa-check {
 /****************
 Lessons / Topics page
 ******************/
+
+/***** nav bar *****/
+.dashboard-link {
+  color: rgb(0, 143, 166) !important;
+  font-weight: bold;
+  padding-left: 20px;
+  font-size: 18px !important;
+}
+
+.dashboard-link a {
+  color: #fff;
+  text-decoration: none;
+}
+.topic-links {
+  float: right;
+  margin-right: 60px;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.topic-links a {
+  color: #fff;
+  font-family: Lato;
+  text-decoration: none;
+}
 
 /****** columns ******/
 .col {

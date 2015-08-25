@@ -136,71 +136,6 @@
       "id": 25,
       "topicId": 5,
       "name": "Ethics lesson?"
-    },
-    {
-      "topicId": 5,
-      "name": "lesson name",
-      "id": 26
-    },
-    {
-      "topicId": 5,
-      "name": "new ethics lesson test",
-      "id": 28
-    },
-    {
-      "topicId": 5,
-      "name": "ethics lesson test 42",
-      "id": 29
-    },
-    {
-      "topicId": 5,
-      "name": "ethics lesson 435",
-      "id": 30
-    },
-    {
-      "topicId": 5,
-      "name": "ethics 452",
-      "id": 31
-    },
-    {
-      "topicId": 1,
-      "name": "ethics 453",
-      "id": 32
-    },
-    {
-      "topicId": 1,
-      "name": "test",
-      "id": 33
-    },
-    {
-      "topicId": 3,
-      "name": "test2",
-      "id": 34
-    },
-    {
-      "topicId": 1,
-      "name": "test4",
-      "id": 35
-    },
-    {
-      "topicId": 1,
-      "name": "test4",
-      "id": 36
-    },
-    {
-      "topicId": 1,
-      "name": "",
-      "id": 37
-    },
-    {
-      "topicId": 1,
-      "name": 529,
-      "id": 38
-    },
-    {
-      "topicId": 1,
-      "name": 648,
-      "id": 39
     }
   ],
   "videos": [
@@ -238,56 +173,6 @@
       "id": 7,
       "lessonId": 6,
       "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/Rx3yIYdNmmQ?rel=0\" frameborder=\"0\" allowfullscreen></iframe>"
-    },
-    {
-      "lessonId": 30,
-      "videoSrc": "video 435",
-      "id": 8
-    },
-    {
-      "lessonId": 31,
-      "videoSrc": "ethics vid 452",
-      "id": 9
-    },
-    {
-      "lessonId": 32,
-      "videoSrc": "vid 453 ethics",
-      "id": 10
-    },
-    {
-      "lessonId": 33,
-      "videoSrc": "test",
-      "id": 11
-    },
-    {
-      "lessonId": 34,
-      "videoSrc": "test2",
-      "id": 12
-    },
-    {
-      "lessonId": 35,
-      "videoSrc": "",
-      "id": 13
-    },
-    {
-      "lessonId": 36,
-      "videoSrc": "",
-      "id": 14
-    },
-    {
-      "lessonId": 37,
-      "videoSrc": "",
-      "id": 15
-    },
-    {
-      "lessonId": 38,
-      "videoSrc": 529,
-      "id": 16
-    },
-    {
-      "lessonId": 39,
-      "videoSrc": 648,
-      "id": 17
     }
   ],
   "userAnswers": [
@@ -607,66 +492,6 @@
       "answerC": "C. he lives in Tucson",
       "answerD": "D. he believes he is really just a brain in a vat",
       "correctAnswer": "c"
-    },
-    {
-      "lessonId": 34,
-      "question": "test2",
-      "answerA": "test2",
-      "answerB": "test2",
-      "answerC": "test2",
-      "answerD": "test2",
-      "correctAnswer": "c",
-      "id": 8
-    },
-    {
-      "lessonId": 35,
-      "question": "test4",
-      "answerA": "",
-      "answerB": "",
-      "answerC": "",
-      "answerD": "",
-      "correctAnswer": "",
-      "id": 9
-    },
-    {
-      "lessonId": 36,
-      "question": "test4",
-      "answerA": "",
-      "answerB": "",
-      "answerC": "",
-      "answerD": "",
-      "correctAnswer": "",
-      "id": 10
-    },
-    {
-      "lessonId": 37,
-      "question": "",
-      "answerA": "",
-      "answerB": "",
-      "answerC": "",
-      "answerD": "",
-      "correctAnswer": "",
-      "id": 11
-    },
-    {
-      "lessonId": 38,
-      "question": "529?",
-      "answerA": 529,
-      "answerB": 529,
-      "answerC": 529,
-      "answerD": 529,
-      "correctAnswer": "c",
-      "id": 12
-    },
-    {
-      "lessonId": 39,
-      "question": 648,
-      "answerA": 648,
-      "answerB": 648,
-      "answerC": "",
-      "answerD": "",
-      "correctAnswer": "a",
-      "id": 13
     }
   ],
   "users": [
