@@ -57,6 +57,7 @@ Lessons / Topics page
   border-bottom: 2px solid grey;
   margin: 0 auto;
   padding: 20px;
+  font-size: 20pt;
 }
 
 /*lesson link*/
@@ -68,10 +69,10 @@ Lessons / Topics page
 
 .lesson a {
   text-decoration: none;
+  font-size: 18pt;
 }
 
-/* new (pseudo-)element
-as a horizontal line */
+/* horizontal line */
 .lesson::before {
   content: '';
   display: block;
@@ -94,7 +95,18 @@ as a horizontal line */
   z-index: 1;
 }
 
-/*circle*/
+.topic-lesson-list .lesson .fa-play-circle-o {
+  position: absolute;
+  left: 12.5px;
+  top: 45%;
+  transform: translateY(-40%);
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  color: rgb(0, 143, 166);
+}
+
+/* circle */
 .lesson::after {
   content: '';
   display: block;
@@ -151,11 +163,17 @@ as a horizontal line */
 .dq-title {
   text-align: center;
   border-bottom: 2px solid grey;
+  font-size: 18pt;
+}
+
+.question-name {
+  font-size: 18pt;
 }
 
 .challenge label {
   display: block;
   padding: 5px;
+  font-size:  18pt;
 }
 
 .challenge button {

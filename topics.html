@@ -32,7 +32,7 @@
 	<div class="col col1">
 		<div class="module-lessons-nav">
 			<h2 class="title"></h2>
-			<div class="lesson-list">
+			<div class="lesson-list topic-lesson-list">
 				<!-- lessons template -->
 			</div>
 		</div>
@@ -80,11 +80,11 @@
 	<script type="text/x-handlebars-template" id="question-template">
 		<div class="question-container"  data-id="{{id}}">
 			<div class="dq-title"><h2>Challenge Question</h2></div>
-			<h3>{{question}}</h3>
-			<label><input type="radio" name="dq1" value="a"> {{answerA}}</label>
-			<label><input type="radio" name="dq1" value="b"> {{answerB}}</label> 
-			<label><input type="radio" name="dq1" value="c"> {{answerC}}</label>
-			<label><input type="radio" name="dq1" value="d"> {{answerD}}</label>
+			<h3 class="question-name">{{question}}</h3>
+			<label><input type="radio" name="dq1" value="a"> A. {{answerA}}</label>
+			<label><input type="radio" name="dq1" value="b"> B. {{answerB}}</label> 
+			<label><input type="radio" name="dq1" value="c"> C. {{answerC}}</label>
+			<label><input type="radio" name="dq1" value="d"> D. {{answerD}}</label>
 			<button type="submit">Answer</button>
 			<input type="hidden" id="lessonId" value="{{lessonId}}">
 		</div>	

@@ -1,4 +1,4 @@
-//handlebars compile fn for Challenge Question
+// handlebars compile fn for Challenge Question
 function renderQues(id, question, answerA, answerB, answerC, answerD, lessonId) {
 	var tmpl = $('#question-template').html()
 	var quesTmpl = Handlebars.compile(tmpl)
@@ -131,7 +131,7 @@ var Router = Backbone.Router.extend({
 					var idSelector = $('[data-id=' + lesson.id + ']')
 					if (correctAnswers.length) {
 						idSelector.addClass('completed')
-						// add check mark if correct
+						// add checkmark if correct
 						idSelector.find('i.fa').removeClass('fa-play-circle-o').addClass('fa-check')
 					}
 				})

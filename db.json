@@ -55,92 +55,42 @@
     {
       "id": 7,
       "topicId": 2,
-      "name": "What is knowledge?"
-    },
-    {
-      "id": 10,
-      "topicId": 2,
-      "name": "Epist lesson?"
-    },
-    {
-      "id": 11,
-      "topicId": 3,
-      "name": "Anthro lesson?"
-    },
-    {
-      "id": 12,
-      "topicId": 3,
-      "name": "Anthro lesson?"
-    },
-    {
-      "id": 13,
-      "topicId": 3,
-      "name": "Anthro lesson?"
-    },
-    {
-      "id": 14,
-      "topicId": 3,
-      "name": "Anthro lesson?"
-    },
-    {
-      "id": 15,
-      "topicId": 3,
-      "name": "Anthro lesson?"
-    },
-    {
-      "id": 16,
-      "topicId": 4,
-      "name": "Religion lesson?"
-    },
-    {
-      "id": 17,
-      "topicId": 4,
-      "name": "Religion lesson?"
-    },
-    {
-      "id": 18,
-      "topicId": 4,
-      "name": "Religion lesson?"
-    },
-    {
-      "id": 19,
-      "topicId": 4,
-      "name": "Religion lesson?"
-    },
-    {
-      "id": 20,
-      "topicId": 4,
-      "name": "Religion lesson?"
-    },
-    {
-      "id": 21,
-      "topicId": 5,
-      "name": "Ethics lesson?"
-    },
-    {
-      "id": 22,
-      "topicId": 5,
-      "name": "Ethics lesson?"
-    },
-    {
-      "id": 23,
-      "topicId": 5,
-      "name": "Ethics lesson?"
-    },
-    {
-      "id": 24,
-      "topicId": 5,
-      "name": "Ethics lesson?"
-    },
-    {
-      "id": 25,
-      "topicId": 5,
-      "name": "Ethics lesson?"
+      "name": "Knowledge and the Gettier problem"
     },
     {
       "topicId": 3,
       "name": "What is free will? - John Searle",
       "id": 26
+    },
+    {
+      "topicId": 4,
+      "name": "How free is God? - William Lane Craig",
+      "id": 27
+    },
+    {
+      "topicId": 2,
+      "name": "Descartes' cogito argument",
+      "id": 28
+    },
+    {
+      "topicId": 5,
+      "name": "The Trolley Problem",
+      "id": 29
+    },
+    {
+      "topicId": 5,
+      "name": "Kant's axe",
+      "id": 30
+    },
+    {
+      "topicId": 4,
+      "name": "What is the evolutionary argument against naturalism? - Alvin Plantinga",
+      "id": 31
+    },
+    {
+      "topicId": 3,
+      "name": "Is there life after death? - Stephen Braude",
+      "id": 32
     }
   ],
   "videos": [
@@ -172,7 +122,7 @@
     {
       "id": 6,
       "lessonId": 7,
-      "videoSrc": "video link"
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/oRzLh9xGOVE?rel=0\" frameborder=\"0\" allowfullscreen></iframe>"
     },
     {
       "id": 7,
@@ -183,97 +133,179 @@
       "lessonId": 26,
       "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/_rZfSTpjGl8?rel=0\" frameborder=\"0\" allowfullscreen></iframe>",
       "id": 8
-    }
-  ],
-  "userAnswers": [
+    },
     {
-      "id": 1,
-      "userId": 1,
-      "questionId": 2,
-      "correct": true,
-      "lessonId": 2
+      "lessonId": 27,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/uKXqTO3wLiw\" frameborder=\"0\" allowfullscreen></iframe>",
+      "id": 9
+    },
+    {
+      "lessonId": 28,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/7iGjiSbEp9c?rel=0\" frameborder=\"0\" allowfullscreen></iframe>",
+      "id": 10
+    },
+    {
+      "lessonId": 29,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/bOpf6KcWYyw?rel=0\" frameborder=\"0\" allowfullscreen></iframe>",
+      "id": 11
+    },
+    {
+      "lessonId": 30,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/x_uUEaeqFog?rel=0\" frameborder=\"0\" allowfullscreen></iframe>",
+      "id": 12
+    },
+    {
+      "lessonId": 31,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/SJ5RPn6nlwo?rel=0\" frameborder=\"0\" allowfullscreen></iframe>",
+      "id": 13
+    },
+    {
+      "lessonId": 32,
+      "videoSrc": "<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/YJ-T8XudfsE?list=PLRHUf0eF0kX0uKnvCwR9prfOINQMin05d\" frameborder=\"0\" allowfullscreen></iframe>",
+      "id": 14
     }
   ],
+  "userAnswers": [],
   "questions": [
     {
       "id": 1,
       "lessonId": 1,
       "question": "According to Keith Ward, what is the biggest problem in philosophy as a whole?",
-      "answerA": "A. materialism vs. 'mind-like reality'",
-      "answerB": "B. foundationalism",
-      "answerC": "C. objectivism vs. pragmatism",
-      "answerD": "D. boring philosophers",
+      "answerA": "materialism vs. 'mind-like reality'",
+      "answerB": "existentialism",
+      "answerC": "objectivism vs. pragmatism",
+      "answerD": "boring philosophers",
       "correctAnswer": "a"
     },
     {
       "id": 2,
       "lessonId": 2,
       "question": "According to David Brin, could the universe be fake?",
-      "answerA": "A. definately not",
-      "answerB": "B. probably",
-      "answerC": "C. nobody knows",
-      "answerD": "D. it is an illogical question",
+      "answerA": "definately not",
+      "answerB": "probably",
+      "answerC": "nobody knows",
+      "answerD": "it is an illogical question",
       "correctAnswer": "c"
     },
     {
       "id": 3,
       "lessonId": 3,
       "question": "One key idea of the Allegory of the Cave is:",
-      "answerA": "A. reality might not be what it seems",
-      "answerB": "B. a more real world exists beyond the physical",
-      "answerC": "C. Platonic forms are absolute",
-      "answerD": "D. all of the above",
+      "answerA": "reality might not be what it seems",
+      "answerB": "a more real world exists beyond the physical",
+      "answerC": "Platonic forms are absolute",
+      "answerD": "all of the above",
       "correctAnswer": "d"
     },
     {
       "id": 4,
       "lessonId": 4,
       "question": "According to Max Tegmark, how likely is it that multiple universes exist?",
-      "answerA": "A. pretty likely",
-      "answerB": "B. pretty unlikely",
-      "answerC": "C. there is no way to know",
-      "answerD": "D. it doesn't really matter",
+      "answerA": "pretty likely",
+      "answerB": "pretty unlikely",
+      "answerC": "there is no way to know",
+      "answerD": "it doesn't really matter",
       "correctAnswer": "d"
     },
     {
       "id": 5,
       "lessonId": 5,
       "question": "Which best describes Polkinghorne's view of time?",
-      "answerA": "A. space and time emerge from something more fundamental",
-      "answerB": "B. time is an illusion",
-      "answerC": "C. God is present in all time always",
-      "answerD": "D. the future is not becoming but is already",
+      "answerA": "space and time emerge from something more fundamental",
+      "answerB": "time is an illusion",
+      "answerC": "God is present in all time always",
+      "answerD": "the future is not becoming but is already",
       "correctAnswer": "a"
     },
     {
       "id": 6,
       "lessonId": 7,
       "question": "Which best describes an item of knowledge according to the standard definition?",
-      "answerA": "A. any belief",
-      "answerB": "B. only foundational beliefs",
-      "answerC": "C. a justified true belief",
-      "answerD": "D. none of the above",
+      "answerA": "any belief",
+      "answerB": "only foundational beliefs",
+      "answerC": "a justified true belief",
+      "answerD": "none of the above",
       "correctAnswer": "c"
     },
     {
       "id": 7,
       "lessonId": 6,
       "question": "Why does David Chalmers look so weird?",
-      "answerA": "A. he is a hippie pretending to be a philosopher",
-      "answerB": "B. he is a philosopher pretending to be a hippie",
-      "answerC": "C. he lives in Tucson",
-      "answerD": "D. he believes he is really just a brain in a vat",
+      "answerA": "he is a hippie pretending to be a philosopher",
+      "answerB": "he is a philosopher pretending to be a hippie",
+      "answerC": "he lives in Tucson",
+      "answerD": "he believes he is really just a brain in a vat",
       "correctAnswer": "c"
     },
     {
       "lessonId": 26,
       "question": "Why might some say that free will is an illusion?",
-      "answerA": "A. we experience free will directly",
-      "answerB": "B. conscious rational decisions do not seem forced",
-      "answerC": "C. casually sufficient conditions seem to explain all that happens",
-      "answerD": "D. determinism can't be true",
+      "answerA": "we experience free will directly",
+      "answerB": "conscious rational decisions do not seem forced",
+      "answerC": "casually sufficient conditions seem to explain all that happens",
+      "answerD": "determinism can't be true",
       "correctAnswer": "c",
       "id": 8
+    },
+    {
+      "lessonId": 27,
+      "question": "\"Omnipotence\" refers to the concept that God is:",
+      "answerA": "all-knowing",
+      "answerB": "all-powerful",
+      "answerC": "present everywhere",
+      "answerD": "an illusion",
+      "correctAnswer": "b",
+      "id": 9
+    },
+    {
+      "lessonId": 28,
+      "question": "What does 'cogito ergo sum' mean?",
+      "answerA": "I am therefore I think",
+      "answerB": "I believe therefore I think",
+      "answerC": "I think therefore I exist",
+      "answerD": "Existence is the pits",
+      "correctAnswer": "c",
+      "id": 10
+    },
+    {
+      "lessonId": 29,
+      "question": "In the Trolley Problem, switching the train to the other track represents which ethical view?",
+      "answerA": "deontology",
+      "answerB": "utilitarianism",
+      "answerC": "virtue ethics",
+      "answerD": "relativism",
+      "correctAnswer": "b",
+      "id": 11
+    },
+    {
+      "lessonId": 30,
+      "question": "Kant's categorical imperative means what?",
+      "answerA": "consequences are all that matter in ethics",
+      "answerB": "you should always follow the moral law regardless of the consequences",
+      "answerC": "all you need is love",
+      "answerD": "Kant used too many big words",
+      "correctAnswer": "b",
+      "id": 12
+    },
+    {
+      "lessonId": 31,
+      "question": "How does Plantinga explain the evolutionary argument against naturalism?",
+      "answerA": "evolutionary theory and naturalism are incompatible ",
+      "answerB": "science can fully explain God",
+      "answerC": "evolution proves naturalism is true",
+      "answerD": "God is evolving",
+      "correctAnswer": "a",
+      "id": 13
+    },
+    {
+      "lessonId": 32,
+      "question": "How does Braude answer the question of life after death?",
+      "answerA": "by studying holy books",
+      "answerB": "by investigating the evidence",
+      "answerC": "through logical examination",
+      "answerD": "none of the above",
+      "correctAnswer": "b",
+      "id": 14
     }
   ],
   "users": [
@@ -293,7 +325,5 @@
       "id": 4,
       "name": "Sally McStudent"
     }
-  ],
-  "lesson": [],
-  "question": []
+  ]
 }

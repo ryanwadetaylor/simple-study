@@ -168,6 +168,13 @@ footer {
   background-color: #354041;
   height: 100px; }
 
+.footer-details > div {
+  color: grey;
+  padding: 10px; }
+
+.footer-details i {
+  color: grey; }
+
 /****************
 Lessons / Topics page
 ******************/
@@ -217,7 +224,8 @@ Lessons / Topics page
 .module-lessons-nav h2 {
   border-bottom: 2px solid grey;
   margin: 0 auto;
-  padding: 20px; }
+  padding: 20px;
+  font-size: 20pt; }
 
 /*lesson link*/
 .lesson {
@@ -226,10 +234,10 @@ Lessons / Topics page
   position: relative; }
 
 .lesson a {
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 18pt; }
 
-/* new (pseudo-)element
-as a horizontal line */
+/* horizontal line */
 .lesson::before {
   content: '';
   display: block;
@@ -250,7 +258,17 @@ as a horizontal line */
   height: 20px;
   z-index: 1; }
 
-/*circle*/
+.topic-lesson-list .lesson .fa-play-circle-o {
+  position: absolute;
+  left: 12.5px;
+  top: 45%;
+  transform: translateY(-40%);
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  color: #008fa6; }
+
+/* circle */
 .lesson::after {
   content: '';
   display: block;
@@ -297,11 +315,16 @@ as a horizontal line */
 
 .dq-title {
   text-align: center;
-  border-bottom: 2px solid grey; }
+  border-bottom: 2px solid grey;
+  font-size: 18pt; }
+
+.question-name {
+  font-size: 18pt; }
 
 .challenge label {
   display: block;
-  padding: 5px; }
+  padding: 5px;
+  font-size: 18pt; }
 
 .challenge button {
   margin-top: 20px;

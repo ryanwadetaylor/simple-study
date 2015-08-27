@@ -13,6 +13,9 @@ var LessonList = Backbone.View.extend({
 			var tmpl = Handlebars.compile(tmplString)
 			_this.$el.html(tmpl(lessonData))
 		})
+		.fail(function (xhr, error) {
+		    console.log(xhr.status)
+		})
 	}
 })
 
@@ -22,10 +25,7 @@ var AddLesson = Backbone.View.extend({
 	editMode: false,
 
 	render: function (lessonId) {
-		var _this = this
-		var tmplString = $('#add-lesson-template').html()
-		var tmpl = Handlebars.compile(tmplString)
-		this.$el.html(tmpl)   	
+		this.$el.html($('#add-lesson-template').html()) 
 	},
 
 	events: {
@@ -41,12 +41,10 @@ var AddLesson = Backbone.View.extend({
 		    	topicId: topicId,
 		    	name: lessonName
 		  	}).done(function (lessonData) {
-		  		
 		  		$.post('http://localhost:3000/videos', { 
 					lessonId: lessonData.id, 
 					videoSrc: $('#video-link').val()
 				})
-		  		
 		  		$.post('http://localhost:3000/questions', {
 		  			lessonId: lessonData.id,
 		  			question: $('#question-name').val(),
@@ -58,7 +56,10 @@ var AddLesson = Backbone.View.extend({
 		  		}).done(function () {
 		  			router.navigate('', { trigger: true })
 		  		})
-			}) // end .done fn
+			}) // end post fns
+			.fail(function (xhr, error) {
+			    console.log(xhr.status)
+			})
 		return false
 	}  // end submitForm fn
 }) // end addLesson view
@@ -69,7 +70,7 @@ var EditLesson = Backbone.View.extend({
 
 	render: function (lessonId) {
 		var _this = this
-		// render template with lesson data in it 
+		// render template with lesson data 
 		$.get('http://localhost:3000/lessons/' + lessonId).done(function (lesson) {
 			var tmplString = $('#edit-lesson-name-template').html()
 			var tmpl = Handlebars.compile(tmplString)
@@ -83,10 +84,9 @@ var EditLesson = Backbone.View.extend({
 
 	submitForm: function () {
 	    var lessonId = $('#lessonId').val()
-	    console.log(lessonId)
 		$.ajax({
 			url: 'http://localhost:3000/lessons/' + lessonId, 
-			type: 'PUT',
+			method: 'PUT',
 			data: {
 				name: $('#lesson-name').val()
 			}	
@@ -120,7 +120,7 @@ var EditVideo = Backbone.View.extend({
 	    var id = $('#videoId').val()
 		$.ajax({
 			url: 'http://localhost:3000/videos/' + id , 
-			type: 'PUT',
+			method: 'PUT',
 			data: {
 				videoSrc: $('#video-link').val()
 			}	
@@ -153,7 +153,7 @@ var EditQuestion = Backbone.View.extend({
 		var id = $('#questionId').val()
 		$.ajax({
 			url: 'http://localhost:3000/questions/' + id,
-			type: 'PUT',
+			method: 'PUT',
 			data: {
 				question: $('#lesson-name').val(),
 				answerA: $('#question-answer-a').val(),
@@ -218,25 +218,3 @@ router.on('route:deleteLesson', function (id) {
 
 
 Backbone.history.start()
-
-// $(function() {
-
-	
-	// function postVideo(id) {
-	// 	var videoLink = $('#video-link').val()
-	// 	console.log(videoLink, id)
-	// 	$.post('http://localhost:3000/videos', {
-	// 		// id passed in 
-	// 		lessonId: id,
-	// 		// val of video link field 
-	// 		videoSrc: $('#video-link').val()
-	// 	})
-	// }
-
-
-// })
-
-
-		  		// .done(function () {
-		  		// 	router.navigate('', { trigger: true })
-		  		// })
