@@ -165,7 +165,36 @@
       "id": 14
     }
   ],
-  "userAnswers": [],
+  "userAnswers": [
+    {
+      "userId": 1,
+      "questionId": 11,
+      "correct": true,
+      "lessonId": 29,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "questionId": 9,
+      "correct": false,
+      "lessonId": 27,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "questionId": 9,
+      "correct": true,
+      "lessonId": 27,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "questionId": 3,
+      "correct": true,
+      "lessonId": 3,
+      "id": 4
+    }
+  ],
   "questions": [
     {
       "id": 1,

@@ -13,16 +13,12 @@ var LessonList = Backbone.View.extend({
 			var tmpl = Handlebars.compile(tmplString)
 			_this.$el.html(tmpl(lessonData))
 		})
-		.fail(function (xhr, error) {
-		    console.log(xhr.status)
-		})
 	}
 })
 
 // add lesson view
 var AddLesson = Backbone.View.extend({
 	el: '.page',
-	editMode: false,
 
 	render: function (lessonId) {
 		this.$el.html($('#add-lesson-template').html()) 
@@ -93,6 +89,9 @@ var EditLesson = Backbone.View.extend({
 		}).done(function () {
 			router.navigate('', { trigger: true });
 		}) 
+		.fail(function (xhr, error) {
+		    console.log(xhr.status)
+		})
 		return false
 	}
 })	
@@ -109,6 +108,9 @@ var EditVideo = Backbone.View.extend({
 			var tmplString = $('#edit-video-template').html()
 			var tmpl = Handlebars.compile(tmplString)
 			_this.$el.html(tmpl(videos[0]))
+		})
+		.fail(function (xhr, error) {
+		    console.log(xhr.status)
 		})
 	},
 
@@ -127,6 +129,9 @@ var EditVideo = Backbone.View.extend({
 		}).done(function () {
 			router.navigate('', { trigger: true });
 		}) 
+		.fail(function (xhr, error) {
+		    console.log(xhr.status)
+		})
 		return false
 	}
 })	
@@ -142,6 +147,9 @@ var EditQuestion = Backbone.View.extend({
 			var tmplString = $('#edit-question-template').html()
 			var tmpl = Handlebars.compile(tmplString)
 			_this.$el.html(tmpl(question[0]))
+		})
+		.fail(function (xhr, error) {
+		    console.log(xhr.status)
 		})
 	},
 
@@ -165,6 +173,9 @@ var EditQuestion = Backbone.View.extend({
 		}).done(function () {
 			router.navigate('', { trigger: true });
 		}) 
+		.fail(function (xhr, error) {
+		    console.log(xhr.status)
+		})
 		return false
 	}
 })	

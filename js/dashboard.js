@@ -13,12 +13,7 @@ $(function () {
   			$.get('http://localhost:3000/lessons/' + lesson.id + '/userAnswers?correct=true').done(function (correctAnswers) {
 				var idSelector = $('[data-id=' + lesson.id + ']')
 				if (correctAnswers.length) {
-					//idSelector.addClass('completed')
-					//$('.completed > i').removeClass('fa-play-circle-o').addClass('fa-check')
-					idSelector.find('i.fa').removeClass('fa-play-circle-o').addClass('fa-check')
-
-
-					
+					idSelector.find('i.fa').removeClass('fa-play-circle-o').addClass('fa-check')	
 				}
 			})
   		})
@@ -47,8 +42,6 @@ $(function () {
   			$.get('http://localhost:3000/lessons/' + lesson.id + '/userAnswers?correct=true').done(function (correctAnswers) {
 				var idSelector = $('[data-id=' + lesson.id + ']')
 				if (correctAnswers.length) {
-					//idSelector.addClass('completed')
-					//$('.completed i.fa').removeClass('fa-play-circle-o').addClass('fa-check')
 					idSelector.find('i.fa').removeClass('fa-play-circle-o').addClass('fa-check')
 				}
 			})
